@@ -19,14 +19,25 @@ html,body{height:100%;margin:0;font-family:Inter,system-ui,-apple-system,"Segoe 
 .hero-sub{color:var(--muted);margin:0}
 .about,.projects,.skills,.contact{padding:3rem 0}
 .project-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem}
-.project-card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:1.25rem;border-radius:8px;border:1px solid rgba(255,255,255,0.03)}
-.project-card h4{margin:0 0 0.5rem}
-.btn{display:inline-block;margin-top:0.75rem;padding:0.5rem 0.75rem;background:var(--accent);color:white;border-radius:6px;text-decoration:none}
-.skill-list{list-style:none;padding:0;display:flex;flex-wrap:wrap;gap:0.5rem}
-.skill-list li{background:rgba(255,255,255,0.03);padding:0.5rem 0.75rem;border-radius:999px;color:var(--muted)}
+.project-card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:1.25rem;border-radius:8px;border:1px solid rgba(255,255,255,0.03);display:flex;flex-direction:column;gap:0.5rem}
+.project-card h4{margin:0 0 0.25rem}
+.project-media{height:120px;border-radius:6px;background:linear-gradient(90deg, rgba(124,58,237,0.12), rgba(124,58,237,0.04));box-shadow:inset 0 0 30px rgba(124,58,237,0.02)}
+.project-media.alt{background:linear-gradient(90deg, rgba(16,185,129,0.12), rgba(16,185,129,0.04));}
+.project-meta{display:flex;justify-content:space-between;align-items:center;margin-top:0.5rem}
+.tech-list{display:flex;gap:0.4rem;flex-wrap:wrap}
+.tag{background:rgba(255,255,255,0.03);padding:0.25rem 0.5rem;border-radius:6px;color:var(--muted);font-size:0.85rem}
+.project-links{display:flex;gap:0.5rem}
+.btn{display:inline-block;padding:0.45rem 0.65rem;background:var(--accent);color:white;border-radius:6px;text-decoration:none;font-size:0.9rem}
+.btn.ghost{background:transparent;border:1px solid rgba(255,255,255,0.04);color:var(--muted)}
+.skills-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem}
+.skill{display:flex;flex-direction:column;gap:0.5rem}
+.skill-head{display:flex;justify-content:space-between;font-weight:600;color:var(--text)}
+.bar{background:rgba(255,255,255,0.03);height:10px;border-radius:999px;overflow:hidden}
+.fill{display:block;height:100%;background:linear-gradient(90deg,var(--accent),#4f46e5);border-radius:999px}
 .site-footer{padding:2rem 0;text-align:center;color:var(--muted);border-top:1px solid rgba(255,255,255,0.02)}
 @media (max-width:700px){
   .project-grid{grid-template-columns:1fr}
   .header-inner{flex-direction:column;align-items:flex-start}
   .nav{margin-top:0.75rem}
+  .skills-grid{grid-template-columns:1fr}
 }
