@@ -19,29 +19,35 @@
       </div>
     </header>
 
+    <aside class="side-nav" aria-label="Section navigation">
+      <a href="#about" class="side-nav-link">About</a>
+      <a href="#projects" class="side-nav-link">Projects</a>
+      <a href="#contact" class="side-nav-link">Contact</a>
+    </aside>
+
     <main>
-      <section id="hero" class="hero">
+      <section id="hero" class="hero animate-on-scroll">
         <div class="container">
           <h2 class="hero-title">컴퓨터공학 2학년, 정민수입니다.</h2>
           <p class="hero-sub">각종 게임 및 모드(팩) 개발에 관심이 많습니다.</p>
         </div>
       </section>
 
-      <section id="about" class="about">
+      <section id="about" class="about animate-on-scroll">
         <div class="container">
           <h3>About</h3>
           <p>현재 컴퓨터공학 2학년 대학생이며, 개인적으로 마인크래프트 모드팩 및 언리얼5을 통한 FPS 게임을 제작하고 있습니다.</p>
         </div>
       </section>
 
-      <section id="projects" class="projects">
+      <section id="projects" class="projects animate-on-scroll">
         <div class="container">
           <h3>Projects</h3>
           <div class="project-grid">
             <div class="projects-completed">
               <h4>완성</h4>
               <div class="project-row">
-                <article class="project-card">
+                <article class="project-card animate-on-scroll">
                   <div class="project-media" aria-hidden="true"></div>
                   <h4>Discord Bot</h4>
                   <p>디스코드 봇 프로젝트.<br>여러 사람들과 각자 넣고 싶은 기능들을 추가해보며 협업 개발을 하였습니다. 사용 기술: Python, discord.py.</p>
@@ -58,7 +64,7 @@
             <div class="projects-inprogress">
               <h4>개발중</h4>
               <div class="project-row">
-                <article class="project-card">
+                <article class="project-card animate-on-scroll">
                   <div class="project-media alt" aria-hidden="true"></div>
                   <h4>Doomlike Parry Game</h4>
                   <p>Doom: The Dark Ages 게임에서 영감을 받아 개발 시작한 패링 기반 액션 게임 입니다. 진행 중인 기능: 전투 메커니즘, 데미지 처리 등등.</p>
@@ -70,7 +76,7 @@
                   </div>
                 </article>
 
-                <article class="project-card">
+                <article class="project-card animate-on-scroll">
                   <div class="project-media" aria-hidden="true"></div>
                   <h4>Zero-to-Engineering-Quest-Recipe</h4>
                   <p>제작중인 마인크래프트 모드팩인 Zero to Engineering에 들어갈 퀘스트 및 KubeJS를 통한 조합법 및 추가 기능을 보관하는 곳입니다.</p>
@@ -87,7 +93,7 @@
         </div>
       </section>
 
-      <section id="contact" class="contact">
+      <section id="contact" class="contact animate-on-scroll">
         <div class="container">
           <h3>Contact</h3>
           <p>Email: <a href="mailto:normal0308@gmail.com">normal0308@gmail.com</a></p>
@@ -99,5 +105,42 @@
     <footer class="site-footer">
       <div class="container">© 2026 정민수 — Dev Portfolio</div>
     </footer>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const targets = document.querySelectorAll('.animate-on-scroll');
+        const sideNav = document.querySelector('.side-nav');
+        const sectionLinks = document.querySelectorAll('.side-nav-link');
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+            } else {
+              entry.target.classList.remove('visible');
+            }
+          });
+        }, { threshold: 0.15 });
+        const headerObserver = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (sideNav) {
+              sideNav.classList.toggle('visible', !entry.isIntersecting);
+            }
+          });
+        }, { threshold: 0.1 });
+        const sectionObserver = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              sectionLinks.forEach(link => {
+                link.classList.toggle('active', link.getAttribute('href') === `#${entry.target.id}`);
+              });
+            }
+          });
+        }, { threshold: 0.45 });
+
+        targets.forEach(target => observer.observe(target));
+        const header = document.querySelector('.site-header');
+        if (header) headerObserver.observe(header);
+        document.querySelectorAll('section[id]').forEach(section => sectionObserver.observe(section));
+      });
+    </script>
   </body>
 </html>
