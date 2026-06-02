@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>정민수 — Dev Portfolio</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="./styles.css">
   </head>
   <body>
     <header class="site-header">
@@ -14,7 +14,6 @@
         <nav class="nav">
           <a href="#about">About</a>
           <a href="#projects">Projects</a>
-          <a href="#skills">Skills</a>
           <a href="#contact">Contact</a>
         </nav>
       </div>
@@ -23,15 +22,15 @@
     <main>
       <section id="hero" class="hero">
         <div class="container">
-          <h2 class="hero-title">안녕하세요 — 컴퓨터공학 2학년, 정민수입니다.</h2>
-          <p class="hero-sub">닉네임 Empty465. 웹 개발과 오픈소스에 관심이 많고, 깔끔한 UI와 성능 최적화를 좋아합니다.</p>
+          <h2 class="hero-title">컴퓨터공학 2학년, 정민수입니다.</h2>
+          <p class="hero-sub">각종 게임 및 모드(팩) 개발에 관심이 많습니다.</p>
         </div>
       </section>
 
       <section id="about" class="about">
         <div class="container">
           <h3>About</h3>
-          <p>저는 컴퓨터공학 2학년 대학생입니다. 닉네임은 <strong>Empty465</strong>이며, 웹 프론트엔드와 오픈소스 기여에 관심이 많습니다. 현재 HTML, CSS, JavaScript를 중심으로 공부하고 있으며 React와 Node.js도 사용합니다.</p>
+          <p>현재 컴퓨터공학 2학년 대학생이며, 개인적으로 마인크래프트 모드팩 및 언리얼5을 통한 FPS 게임을 제작하고 있습니다.</p>
         </div>
       </section>
 
@@ -39,62 +38,50 @@
         <div class="container">
           <h3>Projects</h3>
           <div class="project-grid">
-            <article class="project-card">
-              <div class="project-media" aria-hidden="true"></div>
-              <h4>Portfolio Website</h4>
-              <p>개인 포트폴리오 사이트. 반응형 레이아웃과 깔끔한 UI 구현. 사용 기술: HTML, CSS, Vanilla JS.</p>
-              <div class="project-meta">
-                <div class="tech-list"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JS</span></div>
-                <div class="project-links">
-                  <a class="btn" href="#">Live</a>
-                  <a class="btn ghost" href="https://github.com/yourname/portfolio" target="_blank" rel="noreferrer">GitHub</a>
-                </div>
+            <div class="projects-completed">
+              <h4>완성</h4>
+              <div class="project-row">
+                <article class="project-card">
+                  <div class="project-media" aria-hidden="true"></div>
+                  <h4>Discord Bot</h4>
+                  <p>디스코드 봇 프로젝트.<br>여러 사람들과 각자 넣고 싶은 기능들을 추가해보며 협업 개발을 하였습니다. 사용 기술: Python, discord.py.</p>
+                  <div class="project-meta">
+                    <div class="tech-list"><span class="tag">Python</span><span class="tag">discord.py</span><span class="tag">SQLite3</span></div>
+                    <div class="project-links">
+                      <a class="btn ghost" href="https://github.com/Empty465/Discord_Bot" target="_blank" rel="noreferrer">GitHub</a>
+                    </div>
+                  </div>
+                </article>
               </div>
-            </article>
+            </div>
 
-            <article class="project-card">
-              <div class="project-media alt" aria-hidden="true"></div>
-              <h4>Task Manager</h4>
-              <p>할 일 관리 웹앱. CRUD와 로컬 저장소를 사용하여 간단한 백엔드 없이 작동합니다. 사용 기술: React, LocalStorage.</p>
-              <div class="project-meta">
-                <div class="tech-list"><span class="tag">React</span><span class="tag">CSS</span><span class="tag">Vite</span></div>
-                <div class="project-links">
-                  <a class="btn" href="#">Live</a>
-                  <a class="btn ghost" href="https://github.com/yourname/task-manager" target="_blank" rel="noreferrer">GitHub</a>
-                </div>
+            <div class="projects-inprogress">
+              <h4>개발중</h4>
+              <div class="project-row">
+                <article class="project-card">
+                  <div class="project-media alt" aria-hidden="true"></div>
+                  <h4>Doomlike Parry Game</h4>
+                  <p>Doom: The Dark Ages 게임에서 영감을 받아 개발 시작한 패링 기반 액션 게임 입니다. 진행 중인 기능: 전투 메커니즘, 데미지 처리 등등.</p>
+                  <div class="project-meta">
+                    <div class="tech-list"><span class="tag">언리얼5</span><span class="tag">블루프린트</span></div>
+                    <div class="project-links">
+                      <a class="btn ghost" href="https://github.com/Empty465/DoomlikeParryGame" target="_blank" rel="noreferrer">GitHub</a>
+                    </div>
+                  </div>
+                </article>
+
+                <article class="project-card">
+                  <div class="project-media" aria-hidden="true"></div>
+                  <h4>Zero-to-Engineering-Quest-Recipe</h4>
+                  <p>제작중인 마인크래프트 모드팩인 Zero to Engineering에 들어갈 퀘스트 및 KubeJS를 통한 조합법 및 추가 기능을 보관하는 곳입니다.</p>
+                  <div class="project-meta">
+                    <div class="tech-list"><span class="tag">마인크래프트</span><span class="tag">KubeJS</span><span class="tag">FTB Quest</span></div>
+                    <div class="project-links">
+                      <a class="btn ghost" href="https://github.com/Empty465/Zero-to-Engineering-Quest-Recipe" target="_blank" rel="noreferrer">GitHub</a>
+                    </div>
+                  </div>
+                </article>
               </div>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section id="skills" class="skills">
-        <div class="container">
-          <h3>Skills</h3>
-          <div class="skills-grid">
-            <div class="skill">
-              <div class="skill-head"><span class="name">HTML</span><span class="percent">90%</span></div>
-              <div class="bar"><span class="fill" style="width:90%"></span></div>
-            </div>
-
-            <div class="skill">
-              <div class="skill-head"><span class="name">CSS</span><span class="percent">85%</span></div>
-              <div class="bar"><span class="fill" style="width:85%"></span></div>
-            </div>
-
-            <div class="skill">
-              <div class="skill-head"><span class="name">JavaScript</span><span class="percent">80%</span></div>
-              <div class="bar"><span class="fill" style="width:80%"></span></div>
-            </div>
-
-            <div class="skill">
-              <div class="skill-head"><span class="name">React</span><span class="percent">75%</span></div>
-              <div class="bar"><span class="fill" style="width:75%"></span></div>
-            </div>
-
-            <div class="skill">
-              <div class="skill-head"><span class="name">Node.js</span><span class="percent">70%</span></div>
-              <div class="bar"><span class="fill" style="width:70%"></span></div>
             </div>
           </div>
         </div>
@@ -110,7 +97,7 @@
     </main>
 
     <footer class="site-footer">
-      <div class="container">© 2026 홍길동 — Dev Portfolio</div>
+      <div class="container">© 2026 정민수 — Dev Portfolio</div>
     </footer>
   </body>
 </html>
