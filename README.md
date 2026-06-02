@@ -10,4 +10,4 @@
 - 닉네임: Empty465
 - 이메일: normal0308@gmail.com
 - GitHub: https://github.com/Empty465
-- 학년: 동국대학교 WISE 캠퍼스 컴퓨터공학 2학년
+- 학력: 동국대학교 WISE 캠퍼스 컴퓨터공학 2학년
