@@ -4,9 +4,8 @@
 
 ## 빠른 미리보기
 - https://empty465.github.io/Dev_Portfolio/
-```
 
-## 내 정보
+```
 - 이름: 정민수
 - 닉네임: Empty465
 - 이메일: normal0308@gmail.com
