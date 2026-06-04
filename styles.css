@@ -94,8 +94,15 @@ h3::after{content:"";position:absolute;left:0;bottom:0;width:80px;height:3px;bor
 @media (max-width:700px){
   .project-grid{grid-template-columns:1fr}
   .experience-grid{grid-template-columns:1fr}
+  .project-row > .project-card{min-width:0}
+  .project-links{justify-content:flex-start}
+  .project-links a{flex:1 1 100%;min-width:0;}
+  .project-links a.btn{white-space:normal;text-align:center;}
   .header-inner{flex-direction:column;align-items:flex-start}
   .nav{margin-top:0.75rem}
   .skills-grid{grid-template-columns:1fr}
-  .hero-profile{flex-direction:column;align-items:flex-start}
+  .hero-profile{flex-direction:column;align-items:flex-start;gap:1.5rem}
+  .hero{padding:4rem 0}
+  .hero-title{font-size:2rem}
+  .hero-sub{font-size:0.98rem}
 }
