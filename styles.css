@@ -23,6 +23,8 @@ html,body{height:100%;margin:0;font-family:Inter,system-ui,-apple-system,"Segoe 
 .hero{padding:4rem 0;background:rgba(15,23,32,0.92);border-radius:24px;border:1px solid rgba(255,255,255,0.08);}
 .hero-title{font-size:2rem;margin:0 0 0.5rem}
 .hero-sub{color:var(--muted);margin:0}
+.hero-profile{display:flex;align-items:center;gap:1.25rem}
+.profile-avatar{width:100px;height:100px;border-radius:50%;object-fit:cover;border:2px solid rgba(255,255,255,0.18);box-shadow:0 14px 35px rgba(0,0,0,0.25);}
 .about{padding:3rem 0;background:rgba(15,23,32,0.78);border-radius:24px;border:1px solid rgba(255,255,255,0.06);}
 .projects{padding:3rem 0;background:rgba(17,25,41,0.78);border-radius:24px;border:1px solid rgba(255,255,255,0.06);}
 .skills{padding:3rem 0;background:rgba(18,27,44,0.78);border-radius:24px;border:1px solid rgba(255,255,255,0.06);}
@@ -80,4 +82,5 @@ html,body{height:100%;margin:0;font-family:Inter,system-ui,-apple-system,"Segoe 
   .header-inner{flex-direction:column;align-items:flex-start}
   .nav{margin-top:0.75rem}
   .skills-grid{grid-template-columns:1fr}
+  .hero-profile{flex-direction:column;align-items:flex-start}
 }
