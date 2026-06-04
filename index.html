@@ -13,6 +13,7 @@
         <h1 class="logo">정민수 (Empty465)</h1>
         <nav class="nav">
           <a href="#about">About</a>
+          <a href="#experience">Experience</a>
           <a href="#projects">Projects</a>
           <a href="#skills">Skills</a>
           <a href="#contact">Contact</a>
@@ -22,6 +23,7 @@
 
     <aside class="side-nav" aria-label="Section navigation">
       <a href="#about" class="side-nav-link">About</a>
+      <a href="#experience" class="side-nav-link">Experience</a>
       <a href="#projects" class="side-nav-link">Projects</a>
       <a href="#skills" class="side-nav-link">Skills</a>
       <a href="#contact" class="side-nav-link">Contact</a>
@@ -41,7 +43,32 @@
       <section id="about" class="about animate-on-scroll">
         <div class="container">
           <h3>About</h3>
-          <p>현재 컴퓨터공학 2학년 대학생이며, 개인적으로 마인크래프트 모드팩 및 언리얼5를 통한 FPS 게임을 제작하고 있습니다.<br><br>개발 효율을 높이기 위해 AI 도구를 보조적으로 활용하며, 최종 설계와 검증은 직접 수행중 입니다.<br><br>현재 Java를 학습 중이며, 향후 대학 강의에서 Python, 데이터베이스, 서버 개발을 체계적으로 배우고, 새로운 프로젝트들을 시도 예정입니다.</p>
+          <p>현재 컴퓨터공학 2학년 대학생이며, 개인적으로 마인크래프트 모드팩 및 언리얼5를 통한 FPS 게임을 제작하고 있습니다.<br><br>개발 효율을 높이기 위해 AI 도구를 보조적으로 활용하며, 최종 설계와 검증은 직접 수행중 입니다.<br><br>현재 Java를 학습 중이며, 향후 대학 강의에서 Python, 데이터베이스, 서버 개발을 체계적으로 배우고, 새로운 프로젝트들을 시도 예정입니다<br><br>최종 목표는 Half-Life: Alyx와 같은 VR FPS게임을 제작하는 것입니다.</p>
+        </div>
+      </section>
+
+      <section id="experience" class="experience animate-on-scroll">
+        <div class="container">
+          <h3>Experience</h3>
+          <div class="experience-grid">
+            <article class="experience-card">
+              <h4>컴퓨터공학과 2학년</h4>
+              <p>2023.03 입학 — 군휴/복학 후 재학 중</p>
+              <ul>
+                <li>HTML 및 CSS와 JavaScript, C, JAVA 수강</li>
+                <li>학과 지식 기반으로 게임/모드 제작 실습 진행</li>
+              </ul>
+            </article>
+            <article class="experience-card">
+              <h4>Discord Bot 협업 프로젝트</h4>
+              <p>2026.05 — 2026.06</p>
+              <ul>
+                <li>Python과 discord.py로 봇 기능 설계 및 구현</li>
+                <li>SQLite3를 사용한 데이터 저장과 출력기능 구현</li>
+                <li>팀 협업 환경에서 GitHub로 코드 관리</li>
+              </ul>
+            </article>
+          </div>
         </div>
       </section>
 
@@ -58,6 +85,11 @@
                     <h4>Discord Bot</h4>
                   </a>
                   <p>디스코드 봇 프로젝트 입니다.<br>여러 사람들과 각자 넣고 싶은 기능들을 추가해보며 협업 개발을 하였습니다.</p>
+                  <ul class="project-details">
+                    <li><strong>내 역할:</strong> Python 명령어 설계, SQLite 연동 및 전체 프로젝트 관리</li>
+                    <li><strong>주요 기능:</strong> 사용자 입력에 따른 반응 및 명령어(계산, 시수)</li>
+                    <li><strong>배운 점:</strong> 협업 및 데이터베이스 연동</li>
+                  </ul>
                   <div class="project-meta">
                     <div class="tech-list"><span class="tag">Python</span><span class="tag">discord.py</span><span class="tag">SQLite3</span></div>
                     <div class="project-links">
@@ -71,7 +103,11 @@
                     <div class="project-media"><img src="./Image/wh_image.png" alt="Word-Hack game screenshot"></div>
                     <h4>Word-Hack</h4>
                   </a>
-                  <p>파이썬으로 제작한 단어 추리 게임입니다.<br>사용자가 단어를 추리하며 플레이하는 텍스트 기반 게임입니다.</p>
+                  <p>대학과제로 제작했던 C기반의 단어 추리 게임을 Python으로 재구현한 버전입니다.<br>사용자가 단어를 추리하며 플레이하는 텍스트 기반 게임입니다.<br><br>Fallout4의 해킹 미니게임을 구현한 게임입니다.</p>
+                  <ul class="project-details">
+                    <li><strong>주요 기능:</strong> 단어 추리, 힌트 시스템, 게임 재시작 및 UI 도입</li>
+                    <li><strong>배운 점:</strong> Python 흐름 제어와 인터랙티브 UI 설계</li>
+                  </ul>
                   <div class="project-meta">
                     <div class="tech-list"><span class="tag">Python</span></div>
                     <div class="project-links">
@@ -86,6 +122,10 @@
                     <h4>Zero to Engineering</h4>
                   </a>
                   <p>마인크래프트 모드팩 입니다.<br>여러 기계들과 비쥬얼을 강화시키는 모드들을 도입하고, 고유의 퀘스트를 추가하여 색다른 마인크래프트 경험을 제공합니다.</p>
+                  <ul class="project-details">
+                    <li><strong>주요 기능:</strong> 모드별 고유 퀘스트 추가 및 비쥬얼 개선</li>
+                    <li><strong>배운 점:</strong> KubeJS 스크립팅과 콘텐츠 기획</li>
+                  </ul>
                   <div class="project-meta">
                     <div class="tech-list"><span class="tag">마인크래프트</span><span class="tag">KubeJS</span><span class="tag">FTB Quest</span></div>
                     <div class="project-links">
@@ -107,6 +147,9 @@
                   <h4>Doomlike Parry Game (가제)</h4>
                 </a>
                 <p>Doom: The Dark Ages 게임에서 영감을 받아 개발 시작한 패링 기반 액션 FPS 게임 입니다.</p>
+                <ul class="project-details">
+                  <li><strong>주요 기능:</strong> 패링 시스템, 적 반응, 플레이어 피드백</li>
+                </ul>
                 <div class="project-meta">
                   <div class="tech-list"><span class="tag">언리얼5</span><span class="tag">블루프린트</span></div>
                   <div class="project-links">

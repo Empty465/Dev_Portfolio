@@ -43,6 +43,13 @@ html,body{height:100%;margin:0;font-family:Inter,system-ui,-apple-system,"Segoe 
 .project-media.dpg img{object-position:top center;}
 .project-media.alt{background:rgba(255,255,255,0.04);}
 .project-meta{display:flex;flex-direction:column;gap:0.75rem;margin-top:0.75rem;align-items:flex-start}
+.project-details{margin:0.75rem 0 0 0;list-style:none;padding:0;display:flex;flex-direction:column;gap:0.45rem}
+.project-details li{background:rgba(255,255,255,0.05);padding:0.75rem 0.85rem;border-radius:10px;border:1px solid rgba(255,255,255,0.05);font-size:0.95rem;line-height:1.5}
+.experience-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem;margin-top:1.5rem}
+.experience-card{background:linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01));padding:1.5rem;border-radius:18px;border:1px solid rgba(255,255,255,0.08);}
+.experience-card h4{margin:0 0 0.5rem;font-size:1.1rem}
+.experience-card p{margin:0 0 0.75rem;color:var(--muted)}
+.experience-card ul{margin:0;padding-left:1.2rem;list-style:disc;line-height:1.6;color:var(--muted)}
 .tech-list{display:flex;gap:0.4rem;flex-wrap:wrap}
 .tag{background:rgba(255,255,255,0.03);padding:0.25rem 0.5rem;border-radius:6px;color:var(--muted);font-size:0.85rem}
 .project-links{display:flex;gap:0.5rem;flex-wrap:wrap;margin-top:0.75rem;padding-top:0.75rem;border-top:1px solid rgba(255,255,255,0.08)}
