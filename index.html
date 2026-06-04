@@ -215,12 +215,11 @@
         const targets = document.querySelectorAll('.animate-on-scroll');
         const sideNav = document.querySelector('.side-nav');
         const sectionLinks = document.querySelectorAll('.side-nav-link');
-        const observer = new IntersectionObserver((entries) => {
+        const observer = new IntersectionObserver((entries, observer) => {
           entries.forEach(entry => {
             if (entry.isIntersecting) {
               entry.target.classList.add('visible');
-            } else {
-              entry.target.classList.remove('visible');
+              observer.unobserve(entry.target);
             }
           });
         }, { threshold: 0.15 });
