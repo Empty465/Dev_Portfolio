@@ -83,6 +83,23 @@ h3::after{content:"";position:absolute;left:0;bottom:0;width:80px;height:3px;bor
 .skills-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem}
 .skill{display:flex;flex-direction:column;gap:0.5rem}
 .skill-head{display:flex;justify-content:space-between;font-weight:600;color:var(--text)}
+.skill-details{background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:18px;padding:1rem;display:flex;flex-direction:column;gap:1rem}
+.skill-details summary{list-style:none;cursor:pointer;display:block;padding:0.35rem 0;}
+.skill-details summary::-webkit-details-marker{display:none}
+.skill-details summary .skill-head{align-items:center}
+.skill-details[open] .skill-head span:first-child{color:#fff}
+.certification-attachments{display:flex;flex-direction:column;gap:0.85rem}
+.certification-note{margin:0;color:var(--muted);font-size:0.96rem}
+.certification-controls{display:flex;flex-wrap:wrap;gap:0.75rem}
+.certification-media{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0.75rem}
+.certification-media img{width:100%;height:120px;object-fit:cover;border-radius:16px;border:1px solid rgba(255,255,255,0.08);cursor:pointer;transition:transform 0.3s ease, filter 0.3s ease;}
+.certification-media img:hover{transform:scale(1.03);filter:brightness(1.05);}
+.image-overlay{position:fixed;inset:0;display:none;align-items:center;justify-content:center;background:rgba(0,0,0,0.88);z-index:100;backdrop-filter:blur(10px);padding:1.5rem;}
+.image-overlay.open{display:flex;}
+.image-overlay img{max-width:90%;max-height:85%;border-radius:18px;box-shadow:0 30px 80px rgba(0,0,0,0.5);}
+.overlay-close{position:absolute;top:1rem;right:1rem;background:rgba(255,255,255,0.08);border:none;color:#fff;font-size:2rem;line-height:1;cursor:pointer;width:3rem;height:3rem;border-radius:999px;display:flex;align-items:center;justify-content:center;transition:background 0.2s ease;}
+.overlay-close:hover{background:rgba(255,255,255,0.18);}
+.overlay-caption{margin:1rem 0 0;color:rgba(255,255,255,0.7);font-size:0.95rem;text-align:center;}
 .bar{background:rgba(255,255,255,0.03);height:10px;border-radius:999px;overflow:hidden}
 .fill{display:block;height:100%;background:linear-gradient(90deg,var(--accent),#4f46e5);border-radius:999px}
 .site-footer{padding:2rem 0;text-align:center;color:var(--muted);border-top:1px solid rgba(255,255,255,0.02)}
@@ -180,6 +197,7 @@ h3::after{content:"";position:absolute;left:0;bottom:0;width:80px;height:3px;bor
   .side-nav-link{padding:0.35rem 0.55rem;font-size:0.85rem}
   .project-links{gap:0.55rem}
   .container{padding-left:0.95rem;padding-right:0.95rem}
+  .certification-media{grid-template-columns:1fr}
 }
 
 @media (max-width:580px){
