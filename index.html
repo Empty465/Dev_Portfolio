@@ -43,7 +43,7 @@
       <section id="about" class="about animate-on-scroll">
         <div class="container">
           <h3>About</h3>
-          <p>현재 컴퓨터공학 2학년 대학생이며, 개인적으로 마인크래프트 모드팩 및 언리얼5를 통한 FPS 게임을 제작하고 있습니다.<br><br>개발 효율을 높이기 위해 AI 도구를 보조적으로 활용하며, 최종 설계와 검증은 직접 수행중 입니다.<br><br>현재 Java를 학습 중이며, 향후 대학 강의에서 Python, 데이터베이스, 서버 개발을 체계적으로 배우고, 새로운 프로젝트들을 시도 예정입니다<br><br>최종 목표는 Half-Life: Alyx와 같은 VR FPS게임을 제작하는 것입니다.</p>
+          <p>현재 컴퓨터공학 2학년 대학생이며, 개인적으로 마인크래프트 모드팩 및 언리얼5를 통한 FPS 게임을 제작하고 있습니다.<br><br>개발 효율을 높이기 위해 AI 도구를 보조적으로 활용하며, 최종 설계와 검증은 직접 수행중 입니다.<br><br>현재 Java를 학습 중이며, 대학 강의에서 부족함을 느껴 방학 특강으로 보완한 뒤 PCCE(Java) 레벨 2 자격증을 취득했습니다. 이를 통해 자바 문법과 객체지향 설계에 대한 이해를 강화하며 실전 능력을 높이고 있습니다.<br><br>향후 대학 강의에서 Python, 데이터베이스, 서버 개발을 체계적으로 배우고, 새로운 프로젝트들을 시도 예정입니다.<br><br>최종 목표는 Half-Life: Alyx와 같은 VR FPS게임을 제작하는 것입니다.</p>
         </div>
       </section>
 
@@ -59,6 +59,16 @@
                 <li>학과 지식 기반으로 게임/모드 제작 실습 진행</li>
               </ul>
             </article>
+            <article class="experience-card">
+              <h4>PCCE(Java) 레벨 2 자격증 취득</h4>
+              <p>2026.06 취득</p>
+              <ul>
+                <li>Java 대학 강의를 수강하며 부족함을 느끼고 방학 특강으로 학습을 보완</li>
+                <li>자바 문법, 객체지향 개념, 실전 문제 해결 능력을 강화</li>
+                <li>실제 학습 후 자격증을 취득하여 학습 성과를 증명</li>
+              </ul>
+            </article>
+
             <article class="experience-card">
               <h4>Discord Bot 협업 프로젝트</h4>
               <p>2026.05 — 2026.06</p>
@@ -184,9 +194,24 @@
               <p>블루프린트를 활용한 액션 게임 개발 경험이 있습니다.</p>
             </div>
             <div class="skill">
-              <div class="skill-head"><span>Java</span><span>학습 중</span></div>
-              <div class="bar"><span class="fill" style="width:70%"></span></div>
-              <p>자바 기반 프로그래밍을 공부하며 객체지향 설계와 자료구조를 확장 중입니다.</p>
+              <details class="skill-details">
+                <summary>
+                  <div class="skill-head"><span>Java</span><span>학습 중</span></div>
+                </summary>
+                <div class="bar"><span class="fill" style="width:70%"></span></div>
+                <p>자바 기반 프로그래밍을 공부하며 객체지향 설계와 자료구조를 확장 중입니다.</p>
+                <div class="certification-attachments">
+                  <p class="certification-note">PCCE(Java) 레벨 2 자격증 취득 증빙 자료</p>
+                  <div class="certification-controls">
+                    <a class="btn ghost" href="./certification/PCCE(JAVA)/PCCE_모의.pdf" target="_blank" rel="noreferrer">PDF 보기</a>
+                    <a class="btn ghost" href="./certification/PCCE(JAVA)/PCCE_자격증.jpg" target="_blank" rel="noreferrer">자격증 사진 보기</a>
+                  </div>
+                  <div class="certification-media">
+                    <img src="./certification/PCCE(JAVA)/PCCE_자격증.jpg" alt="PCCE 자격증 사진">
+                    <img src="./certification/PCCE(JAVA)/PCCE_성적표.jpg" alt="PCCE 성적표 사진">
+                  </div>
+                </div>
+              </details>
             </div>
             <div class="skill">
               <div class="skill-head"><span>Minecraft Modding</span><span>KubeJS, FTB Quest</span></div>
@@ -206,6 +231,12 @@
         </div>
       </section>
     </main>
+
+    <div class="image-overlay" id="imageOverlay" aria-hidden="true">
+      <button class="overlay-close" id="overlayClose" aria-label="닫기">×</button>
+      <img id="overlayImage" alt="확대된 자격증 이미지">
+      <p class="overlay-caption">이미지를 클릭하거나 ESC를 눌러 닫습니다.</p>
+    </div>
 
     <footer class="site-footer">
       <div class="container">© 2026 정민수 — Dev Portfolio</div>
@@ -244,6 +275,38 @@
         const header = document.querySelector('.site-header');
         if (header) headerObserver.observe(header);
         document.querySelectorAll('section[id]').forEach(section => sectionObserver.observe(section));
+
+        const overlay = document.getElementById('imageOverlay');
+        const overlayImage = document.getElementById('overlayImage');
+        const overlayClose = document.getElementById('overlayClose');
+
+        document.querySelectorAll('.certification-media img').forEach(img => {
+          img.addEventListener('click', () => {
+            overlayImage.src = img.src;
+            overlayImage.alt = img.alt;
+            overlay.classList.add('open');
+            overlay.setAttribute('aria-hidden', 'false');
+          });
+        });
+
+        const closeOverlay = () => {
+          overlay.classList.remove('open');
+          overlay.setAttribute('aria-hidden', 'true');
+          overlayImage.src = '';
+        };
+
+        overlayClose.addEventListener('click', closeOverlay);
+        overlay.addEventListener('click', (event) => {
+          if (event.target === overlay || event.target === overlayImage) {
+            closeOverlay();
+          }
+        });
+
+        document.addEventListener('keydown', (event) => {
+          if (event.key === 'Escape' && overlay.classList.contains('open')) {
+            closeOverlay();
+          }
+        });
       });
     </script>
   </body>
